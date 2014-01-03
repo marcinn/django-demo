@@ -8,6 +8,8 @@ class PasswordMiddleware(object):
     def process_request(self, request):
         if not app_settings.REQUIRE_PASSWORD or \
                 request.get_signed_cookie(app_settings.COOKIE_NAME, default=False, salt=get_salt(request)):
+            if request.path == app_settings.LOGIN_URL:
+                return redirect('/')
             return None
         if request.path == app_settings.LOGIN_URL:
             return login_view(request)
