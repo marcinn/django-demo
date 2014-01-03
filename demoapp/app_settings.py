@@ -11,4 +11,4 @@ COOKIE_NAME = getattr(settings, 'DEMO_COOKIE_NAME', 'demo_session')
 # Choose from META keys available in META of Django's HttpRequest object.
 # This make unauthorized use of cookie much harder.
 SALT_REQUEST_META_KEYS = getattr(
-    settings, 'DEMO_SALT_REQUEST_META_KEYS', ['REMOTE_ADDR', 'REMOTE_HOST', 'HTTP_USER_AGENT'])
+    settings, 'DEMO_SALT_REQUEST_META_KEYS', ['REMOTE_ADDR', 'HTTP_USER_AGENT'])
