@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 import os
-import blockthem
+import demoapp
 from pip.req import parse_requirements
 
 requirements = parse_requirements('requirements.txt')
@@ -24,7 +24,7 @@ setup(
     author="Daniel Boczek",
     author_email="daniel.boczek@gmail.com",
     name='django-demo',
-    version=blockthem.__version__,
+    version=demoapp.__version__,
     description='Reusable app to protect access to project under development',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
     url='https://github.com/dboczek/django-demo',
