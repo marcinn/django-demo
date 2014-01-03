@@ -2,7 +2,7 @@ from demoapp.forms import DemoLoginForm
 from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 from demoapp import app_settings
-from demoapp import get_salt
+from demoapp.utils import get_salt
 
 
 def login_view(request):

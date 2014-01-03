@@ -1,7 +1,7 @@
 from demoapp import app_settings
 from demoapp.views import login_view
 from django.shortcuts import redirect
-from demoapp import get_salt
+from demoapp.utils import get_salt
 
 
 class PasswordMiddleware(object):
