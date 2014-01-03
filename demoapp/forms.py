@@ -1,10 +1,10 @@
 from django import forms
 from demoapp import app_settings
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 
 class DemoLoginForm(forms.Form):
-    password = forms.CharField(widget=forms.PasswordInput)
+    password = forms.CharField(label=_('Password'), widget=forms.PasswordInput)
 
     def clean_password(self):
         password = self.cleaned_data['password']
