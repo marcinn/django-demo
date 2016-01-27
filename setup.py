@@ -1,11 +1,7 @@
 from setuptools import setup, find_packages
 import os
 import demoapp
-from pip.req import parse_requirements
 
-requirements = parse_requirements('requirements.txt')
-requires = [str(item.req) for item in requirements]
-links = [str(item.url) for item in requirements if item.url is not None]
 
 CLASSIFIERS = [
     'Development Status :: 4 - Beta',
@@ -31,12 +27,11 @@ setup(
     license='Public Domain',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
-    install_requires=requires,
-    # tests_require=[
-    # ],
-    dependency_links=links,
+    install_requires=[
+        'django>=1.4.1',
+        'django-bootstrap3>=2.5.0',
+        ],
     packages=find_packages(exclude=["project", "project.*"]),
     include_package_data=True,
     zip_safe=False,
-    # test_suite='runtests.main',
 )

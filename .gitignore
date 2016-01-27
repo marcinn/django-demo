@@ -1,3 +1,6 @@
 *.log
 *.pot
 *.pyc
+/build/
+/dist/
+/*.egg-info/
